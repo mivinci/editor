@@ -1,0 +1,41 @@
+{
+  "name": "marked-plus",
+  "version": "0.0.1",
+  "description": "markdown editor",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mivinci/marked.git"
+  },
+  "keywords": [
+    "marked"
+  ],
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "author": "Mivinci",
+  "license": "MIT",
+  "homepage": "https://github.com/mivinci/r.js#readme",
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/katex": "^0.11.0",
+    "@types/marked": "^2.0.3",
+    "@types/mermaid": "^8.2.6",
+    "svelte": "^3.38.2",
+    "svelte-preprocess": "^4.7.3",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.7"
+  },
+  "dependencies": {
+    "github-markdown-css": "^4.0.0",
+    "katex": "^0.13.11",
+    "marked": "^2.0.7",
+    "mermaid": "^8.10.2"
+  }
+}
