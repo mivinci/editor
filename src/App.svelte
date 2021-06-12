@@ -47,7 +47,7 @@
     </div>
   </div>
   <div class="editor">
-    <textarea bind:value />
+    <textarea bind:value placeholder="输入 Markdown (支持 LaTeX，Mermaid)" />
     <div class="preview">
       <div class:markdown-body={useGithubcss} class:hide={showHtml}>{@html html}</div>
       <textarea class:hide={!showHtml} value={html} readonly></textarea>

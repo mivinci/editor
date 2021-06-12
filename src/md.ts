@@ -1,22 +1,22 @@
 import marked from "marked";
-import mermaid from "mermaid";
+// import mermaid from "mermaid";
 import { renderToString } from "katex";
 
 let i = 0;
 
 marked.use({
   renderer: {
-    code: (code: string, lang: string) => {
-      if (lang == 'mermaid') {
-        try {
-          code = mermaid.render(`a${i++}`, code);
-        } catch (e) {
+    // code: (code: string, lang: string) => {
+    //   if (lang == 'mermaid') {
+    //     try {
+    //       code = mermaid.render(`a${i++}`, code);
+    //     } catch (e) {
 
-        }
-        return code;
-      }
-      return false;
-    },
+    //     }
+    //     return code;
+    //   }
+    //   return false;
+    // },
 
     paragraph: (text: string) => {
       // unescape

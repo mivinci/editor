@@ -7,7 +7,11 @@ const config = {
     svelte({
       preprocess: preprocess()
     })
-  ]
+  ],
+  build: {
+    minify: true,
+    ssr: false
+  }
 }
 
 export default config;
