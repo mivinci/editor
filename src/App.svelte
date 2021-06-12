@@ -1,6 +1,7 @@
 <script lang="ts">
   import md from "./md";
   import wordcount from "./wordcount";
+  import { example } from "./const";
 
   let value = new URLSearchParams(location.search).get("text") || "";
 
@@ -39,18 +40,22 @@
           download(html, "text.html");
         }}>下载 HTML</button
       >
+      <a href="/?text={example}">查看示例</a>
+      <a href="/">清空</a>
     </div>
     <div>
       <input type="checkbox" bind:checked={useGithubcss} /> 使用 GitHub 样式
-      <input type="checkbox" bind:checked={showHtml}> 显示 HTML
+      <input type="checkbox" bind:checked={showHtml} /> 显示 HTML
       <span style="float: right;">{count} 个字了哦</span>
     </div>
   </div>
   <div class="editor">
     <textarea bind:value placeholder="输入 Markdown (支持 LaTeX，Mermaid)" />
     <div class="preview">
-      <div class:markdown-body={useGithubcss} class:hide={showHtml}>{@html html}</div>
-      <textarea class:hide={!showHtml} value={html} readonly></textarea>
+      <div class:markdown-body={useGithubcss} class:hide={showHtml}>
+        {@html html}
+      </div>
+      <textarea class:hide={!showHtml} value={html} readonly />
     </div>
   </div>
 </main>
@@ -60,6 +65,7 @@
     height: 4em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   h1 {
@@ -95,12 +101,16 @@
     overflow: auto;
   }
 
-  .preview>textarea {
+  .preview > textarea {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     border: 0;
+  }
+
+  .action a {
+    margin-left: 1em;
   }
 
   .hide {
